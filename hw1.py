@@ -75,7 +75,7 @@ def sigmoid_normalize(image, a):
     return sigmoid_helper(image, a)
 
 def sigmoid_helper(image, a):
-    255*(1 + math.e**((-a**-1)(p-128)))**-1
+    255*(1 + math.e**((-a**-1)(image - 128)))**-1
 
 print(single_type_candy_count("pokedex.json"))
 print(reflections_and_projections(np.array([[1, 3, 5, 7], [2, 4, 6, 8]])))
